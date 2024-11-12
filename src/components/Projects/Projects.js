@@ -5,9 +5,9 @@ import Particle from "../Particle";
 
 
 import Cvsu from "../../Assets/Projects/Cvsu.jpg";
-import Webit from "../../Assets/Projects/Inventory.jpg";
+import Webit from "../../Assets/Projects/WebIt.jpg";
 
-import Inventory from "../../Assets/Projects/WebIt.jpg";
+import Inventory from "../../Assets/Projects/Inventory.jpg";
 
 function Projects() {
   return (
