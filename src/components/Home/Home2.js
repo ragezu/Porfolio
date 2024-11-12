@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Container, Row, Col, Form, Button } from "react-bootstrap";
+import { Container, Row, Col, Form, Button, Alert } from "react-bootstrap";
 import myImg from "../../Assets/avatar.png";
 import Tilt from "react-parallax-tilt";
 import './Home2.css'
@@ -13,9 +13,11 @@ import { FaLinkedinIn } from "react-icons/fa";
 
 function Home2() {
   const [formData, setFormData] = useState({
+    name: "",
     email: "",
     message: "",
   });
+  const [status, setStatus] = useState(""); // To store the status message
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -33,20 +35,21 @@ function Home2() {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
+        name: formData.name,
         email: formData.email,
         message: formData.message,
       }),
     })
       .then((response) => {
         if (response.ok) {
-          alert("Email sent successfully!");
-          setFormData({ email: "", message: "" });
+          setStatus("Email sent successfully!"); // Set success message
+          setFormData({ name: "", email: "", message: "" });
         } else {
-          alert("Failed to send message. Please try again.");
+          setStatus("Failed to send email. Please try again.");
         }
       })
       .catch((error) => {
-        alert("An error occurred. Please try again.");
+        setStatus("An error occurred. Please try again.");
       });
   };
 
@@ -123,15 +126,26 @@ function Home2() {
               </li>
             </ul>
             <p>Feel free to <span className="purple">connect </span>with me</p>
-            <h2>Contact Me</h2>
+            <h1>Contact Me</h1>
             <div className="contact-form-container">
               <Form onSubmit={handleSubmit} className="contact-form">
+                <Form.Group controlId="formName">
+                  <Form.Label>Name</Form.Label>
+                  <Form.Control
+                    type="text"
+                    name="name"
+                    placeholder="Enter your name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
+                  />
+                </Form.Group>
                 <Form.Group controlId="formEmail">
                   <Form.Label>Email address</Form.Label>
                   <Form.Control
                     type="email"
                     name="email"
-                    placeholder="@"
+                    placeholder="Enter your email"
                     value={formData.email}
                     onChange={handleChange}
                     required
@@ -143,7 +157,7 @@ function Home2() {
                     as="textarea"
                     rows={3}
                     name="message"
-                    placeholder=""
+                    placeholder="Enter your message"
                     value={formData.message}
                     onChange={handleChange}
                     required
@@ -152,6 +166,16 @@ function Home2() {
                 <Button variant="primary" type="submit">
                   Send
                 </Button>
+                {/* Display status message in an alert under the button */}
+                {status && (
+                  <Alert
+                    variant="success"
+                    className="mt-3 text-center"
+                    style={{ color: "purple", fontWeight: "bold" }}
+                  >
+                    {status}
+                  </Alert>
+                )}
               </Form>
             </div>
           </Col>

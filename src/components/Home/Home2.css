@@ -22,3 +22,10 @@
     margin-top: 10px;
   }
   
+  .alert-success {
+    background-color: #f3e8ff;
+    border: none;
+    color: purple;
+    font-weight: bold;
+  }
+  
