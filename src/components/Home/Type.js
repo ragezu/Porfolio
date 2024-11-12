@@ -9,7 +9,7 @@ function Type() {
           
           "Freelancer",
           "CS Student",
-          "Open Source Contributor",
+          "Pro player of Naos Esport",
         ],
         autoStart: true,
         loop: true,
