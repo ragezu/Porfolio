@@ -134,7 +134,7 @@ function Home2() {
                   <Form.Control
                     type="text"
                     name="name"
-                    placeholder="Enter your name"
+                    placeholder=""
                     value={formData.name}
                     onChange={handleChange}
                     required
@@ -145,7 +145,7 @@ function Home2() {
                   <Form.Control
                     type="email"
                     name="email"
-                    placeholder="Enter your email"
+                    placeholder="@"
                     value={formData.email}
                     onChange={handleChange}
                     required
@@ -157,7 +157,7 @@ function Home2() {
                     as="textarea"
                     rows={3}
                     name="message"
-                    placeholder="Enter your message"
+                    placeholder="your message"
                     value={formData.message}
                     onChange={handleChange}
                     required
