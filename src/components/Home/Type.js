@@ -9,7 +9,7 @@ function Type() {
           
           "Freelancer",
           "CS Student",
-          "Pro player of Naos Esport",
+          "Pro player of Naos Esports",
         ],
         autoStart: true,
         loop: true,
