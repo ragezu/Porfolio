@@ -1,0 +1,10 @@
+.activity-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 20px; /* spacing between items */
+    list-style: none; /* removes bullets */
+    padding: 0;
+    margin: 0 auto;
+    max-width: 600px; /* optional, controls width */
+  }
+  

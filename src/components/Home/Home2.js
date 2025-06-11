@@ -62,24 +62,25 @@ function Home2() {
               LET ME <span className="purple"> INTRODUCE </span> MYSELF
             </h1>
             <p className="home-about-body">
-              I'm a programming enthusiast and a student at CvSU Bacoor with a growing passion for game development.
+              I'm a programming and gaming enthusiast, a student at CvSU Bacoor with a growing passion for game development and being a pro player.
               <br />
-              <br />I’m fluent in classic languages like
+              <br />I’m fluent in beginner languages like
               <i>
                 <b className="purple"> C++, JavaScript, and Python </b>
               </i>
               <br />
               <br />
-              I love building new &nbsp;
+              I love building and selling new &nbsp;
               <i>
                 <b className="purple">Web Technologies and Products </b> especially in{" "}
-                <b className="purple">Blockchain</b> and <b className="purple">decentralized tech.</b>
+                <b className="purple">Blockchain</b> and <b className="purple">Crypto tech.</b>
               </i>
+             
+             
               <br />
               <br />
-              Alongside my coding skills, I’m dedicated to learning and applying modern tools like <b className="purple">Node.js, React.js,</b> and
               <i>
-                <b className="purple"> Next.js </b> to create dynamic applications. Someday, I aim to merge these skills into creating immersive, innovative games and experiences.
+              My parents are separated, and I currently live with my mom. I have a very intelligent sister who, like me, is gifted in many areas, although she struggles a bit with math.
               </i>
             </p>
           </Col>
